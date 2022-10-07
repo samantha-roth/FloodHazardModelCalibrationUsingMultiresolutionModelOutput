@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -l feature=rhel7
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=48:00:00 
+#PBS -l mem=20gb
+#PBS -A kaf26_c_g_sc_default
+#PBS -j oe
+
+conda activate /storage/work/svr5482/raster_env
+cd /storage/work/svr5482/FloodingModelCalibrationProject/multires/spatial/changPC2014/10m50m/code/nCh_RWE/100e400c/downscale/calibrate
+Rscript vat_rw_MH.25_3cm_nug_sqexpC2.R
